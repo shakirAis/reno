@@ -1,0 +1,274 @@
+body {
+    margin: 0;
+}
+#header {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(207, 178, 178, 0.45);
+    display: table;
+}
+.logo {
+    background-image: url(../img/Haus_Master.png);
+    width: 200px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: table-cell;
+}
+#header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: table-cell;
+    vertical-align: middle;
+}
+#header ul li {
+    display: inline-block;
+    width: 14%;
+    text-align: center;
+    color: #30292b;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 60px;
+}
+#header ul li a {
+    color: #30292b;
+    text-decoration: none;
+}
+#banner {
+    margin-top: 20px;
+}
+#banner h1 {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 450px;
+    margin: 0;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.05em;
+    font-feature-settings: 'pnum' on, 'onum' on;
+    color: rgba(40, 31, 31, 0.85);
+}
+.banner_img {
+    width: 100%;
+    height: 450px;
+    background-color: rgba(214, 191, 191, 0.4);
+    position: relative;
+}
+.first_img {
+    background-image: url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.order_call {
+    width: 300px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 50px;
+    right: 200px;
+    border: 1px solid #ffffff;
+    color: #442121;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 60px;
+    box-shadow: 2px 4px 4px 6px #ffffff;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.order_call:focus {
+    outline: none;
+}
+.order_call:hover {
+    width: 320px;
+    right: 190px;
+    height: 70px;
+    bottom: 40px;
+}
+.slick-dots li button:before {
+    color: #cfb2b2;
+    font-size: 13px;
+    opacity: 1;
+}
+.slick-dots li.slick-active button:before {
+    font-size: 17px;
+    color: #b09595;
+    opacity: 1;
+}
+h2 {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 60px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: rgba(40, 31, 31, 0.85);
+    margin: 60px 0 30px 0;
+}
+.appartment {
+    background-color: rgba(207, 178, 178, 0.2);
+}
+.office {
+    background-color: rgba(214, 191, 191, 0.3);
+}
+.bathroom {
+    background-color: rgba(214, 191, 191, 0.35);
+}
+.doors {
+    background-color: rgba(214, 191, 191, 0.4);
+}
+.pipes {
+    background-color: rgba(214, 191, 191, 0.43);
+}
+.machines {
+    background-color: rgba(214, 191, 191, 0.48);
+}
+.feature {
+    height: 350px;
+    position: relative;
+}
+.feature h3 {
+    height: 85px;
+    color: rgba(48, 41, 43, 0.95);
+    font-family: Raleway;
+    font-size: 35px;
+    font-weight: 500;
+    letter-spacing: -1.75px;
+    line-height: 35px;
+    padding-top: 35px;
+}
+.feature p {
+    max-height: 110px;
+    color: #281f1f;
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.8px;
+    line-height: 22px;
+    text-transform: lowercase;
+    color: #281f1f;
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 30px;
+}
+.feature a.active {
+    border-radius: 30px;
+    border: 1px solid rgba(146, 124, 124, 0.76);
+    background-color: rgba(207, 178, 178, 0.7);
+    line-height: 48px;
+}
+.feature a:hover {
+    border-radius: 30px;
+    border: 1px solid rgba(146, 124, 124, 0.76);
+    background-color: rgba(207, 178, 178, 0.7);
+    line-height: 48px;
+}
+.feature a {
+    color: #281f1f;
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.9px;
+    line-height: 48px;
+    width: 160px;
+    height: 50px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -80px;
+    text-decoration: underline;
+}
+#more_wrapper {
+    height: 500px;
+    width: 100%;
+    display: block;
+    margin-top: 50px;
+}
+.objects_photo {
+    width: 500px;
+    height: 500px;
+    margin-left: 20px;
+}
+.objects_explain {
+    height: 500px;
+    position: relative;
+}
+.objects_explain h3 {
+    letter-spacing: -2px;
+    line-height: 60px;
+    color: #442121;
+    font-family: "Raleway - Medium";
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0;
+}
+.objects_explain p {
+    height: auto;
+    max-height: 300px;
+    color: #281f1f;
+    font-family: Raleway;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -1.1px;
+    line-height: 36px;
+    text-transform: lowercase;
+    padding: 50px 50px 0 0;
+    text-align: justify;
+    margin-top: 0;
+}
+.objects_explain button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -180px;
+    width: 360px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #e4cdcd;
+    color: rgba(68, 33, 33, 0.95);
+    font-family: Raleway;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: -1.3px;
+    line-height: 30px;
+    border: 1px solid #e4cdcd;
+}
+.objects_explain button:focus {
+    outline: none;
+}
+.objects_explain span {
+    color: #000000;
+    font-family: Raleway;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -1.2px;
+    line-height: 40px;
+    text-transform: lowercase;
+    display: inline-block;
+    float: right;
+    margin-right: 100px;
+}
+.explain_block {
+    display: none;
+}
+.active {
+    display: block;
+}
+.active_btn {
+    border-radius: 30px;
+    border: 1px solid rgba(146, 124, 124, 0.76);
+    background-color: rgba(207, 178, 178, 0.7);
+    line-height: 48px;
+}
