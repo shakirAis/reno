@@ -272,3 +272,278 @@ h2 {
     background-color: rgba(207, 178, 178, 0.7);
     line-height: 48px;
 }
+.price_block {
+    height: 360px;
+    width: 580px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.apparts_price {
+    background-image: url(../img/2-layers\ \(3\).jpg);
+}
+.price_block h4 {
+    color: rgba(40, 31, 31, 0.85);
+    font-family: Raleway;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 60px;
+}
+.price_block span {
+    font-size: 50px;
+}
+.offices_price {
+    background-image: url(../img/2-layers\ \(4\).jpg);
+}
+.baths_price {
+    background-image: url(../img/2-layers\ \(5\).jpg);
+}
+.doors_price {
+    background-image: url(../img/2-layers\ \(6\).jpg);
+}
+.pipes_price {
+    background-image: url(../img/rabs.jpg);
+}
+.machines_price {
+    background-image: url(../img/2-layers\ \(8\).jpg);
+}
+.advantages {
+    width: 300px;
+    height: 300px;
+    border: 3px solid rgba(207, 178, 178, 0.35);
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+.first_adv {
+    margin-left: 30px;
+    float: left;
+}
+.last_adv {
+    float: right;
+    margin-right: 30px;
+}
+.middle1_adv {
+    margin-right: 15px;
+}
+.middle2_adv {
+    margin-left: 15px;
+}
+.shirt_txt {
+    width: 300px;
+    height: 50px;
+    color: #000000;
+    font-family: Raleway;
+    font-size: 45px;
+    font-weight: 400;
+    letter-spacing: -2.25px;
+    line-height: 50px;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+}
+.advantages img {
+    position: absolute;
+    bottom: 0%;
+    right: -7%;
+}
+.long_txt {
+    display: none;
+    width: 280px;
+    max-height: 140px;
+    height: auto;
+    color: #000000;
+    font-family: Raleway;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: -1.4px;
+    line-height: 30px;
+    text-transform: lowercase;
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+    text-align: center;
+    margin: auto;
+
+}
+
+.fade-in {
+    background: rgba(207, 178, 178, 0.35);
+    transition:             background 1s;
+        -moz-transition:    background 1s;
+        -ms-transition:     background 1s;
+        -o-transition:      background 1s;
+        -webkit-transition: background 1s;
+}
+.fade-out {
+    background: #ffffff;
+    transition:             background 1s;
+        -moz-transition:    background 1s;
+        -ms-transition:     background 1s;
+        -o-transition:      background 1s;
+        -webkit-transition: background 1s;
+}
+#call_master {
+    width: 100%;
+    height: 300px;
+    background-color: rgba(207, 178, 178, 0.35);
+} 
+#call_master input, select, button {
+    width: 250px;
+    height: 40px;
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+}
+.call_master_wrapper div {
+    height: 200px;
+}
+.suitable_time {
+    margin-top: 40px;
+}
+#datetime_wrapper {
+    height: 100px;
+}
+input:focus, select:focus, button:focus {
+    outline: none;
+}
+input::placeholder, select, input {
+    padding-left: 20px;
+    line-height: 38px;
+    color: rgba(40, 31, 31, 0.6);
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+input::placeholder {
+    padding-left: 0;
+}
+select option {
+    font-size: 16px;
+}
+button {
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 36px;
+}
+.portfolio_img {
+    height: 500px;
+}
+.photo {
+    margin: -4px;
+    padding: 0;
+    display: inline-block;
+}
+.first_photo {
+    width: 650px;
+    height: 300px;
+    background-image: url(../img/Rectangle_40.jpg);
+    margin-left: 0;
+}
+.second_photo {
+    width: 450px;
+    height: 300px;
+    background-image: url(../img/Rectangle_41.jpg);
+}
+.third_photo, .fourth_photo {
+    width: 550px;
+    height: 200px;    
+}
+.third_photo {
+    background-image: url(../img/Rectangle_42.jpg);
+    margin-left: 0;
+}
+.fourth_photo {
+    background-image: url(../img/Rectangle_43.jpg);
+}
+.our_txt, .our_images {
+    display: inline-block;
+}
+.our_txt {
+    width: 38%;
+    height: 450px;
+}
+.our_images {
+    width: 60%;
+    height: inherit;
+}
+.description {
+    height: 300px;
+}
+.feedback {
+    height: 250px;
+}
+.description h4 {
+    color: #442121;
+    font-family: Raleway;
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: -1.8px;
+    line-height: 40px;
+    /* text-transform: lowercase; */
+    text-align: center;
+}
+.description p {
+    color: #281f1f;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    line-height: 36px;
+    /* text-transform: lowercase; */
+    text-align: justify;
+}
+.feedback h4 {
+    color: #442121;
+    font-family: Raleway;
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: -1.8px;
+    line-height: 40px;
+    /* text-transform: lowercase; */
+    text-align: center;
+
+}
+.feedback p, h5 {
+    color: #281f1f;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    line-height: 36px;
+    /* text-transform: lowercase; */
+    margin: 0;
+}
+h5 {
+    font-size: 24px;
+    text-align: right;
+}
+.slick-prev {
+    left: 50px;
+}
+.slick-next {
+    right: 50px;
+}
+.slick-prev:before, .slick-next:before {
+    font-size: 50px;
+    color: rgba(207, 178, 178, 0.35);
+}
+.slick-prev:before {
+    color: #ffffff;
+}
+.slick-arrow {
+    z-index: 999999999999999999999;
+}
+/* .slick-prev, .slick-next {
+    top: 100%;
+    margin-top: 10px;
+} */
