@@ -8,36 +8,41 @@
     <link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
     <link rel="stylesheet" href="libs/uikit/css/uikit.min.css" />
+    <link href="libs/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="libs/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="libs/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap&subset=latin-ext" 
+    rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div id="header">
-        <div class="logo"></div>
+        <a class="logo" href="#"></a>
         <ul id="menu">
-            <li><a>Спектр услуг</a></li>
-            <li><a>Стоимость</a></li>
-            <li><a>Наши преимущеста</a></li>
-            <li><a>Портфолио</a></li>
-            <li><a>Отзывы</a></li>
-            <li><a>Контакты</a></li>
-            <li><a href="tel:+7(843)2000000">+7(843)2000000</a></li>
+            <li><a href="#our_features">Спектр услуг</a></li>
+            <li><a href="#our_prices">Стоимость</a></li>
+            <li><a href="#why_us">Наши преимущеста</a></li>
+            <li><a href="#portfolio_wrapper">Портфолио</a></li>
+            <li><a href="#portfolio_wrapper">Отзывы</a></li>
+            <li><a href="#our_location">Контакты</a></li>
+            <li><a href="tel:+7(843)2000000"><i class="fas fa-phone-alt"></i> +7(843)2000000</a></li>
         </ul> 
     </div>
     <div id="banner">
         <div class="banner_slide">
             <div class="banner_img first_img">
                 <h1>Сделаем ремонт любой сложности за короткие сроки</h1>
-                <button class="order_call">Оставить заявку</button>
+                <button class="order_call" onclick="location.href='#call_master';">Оставить заявку</button>
             </div>
         </div>
         <div class="banner_slide">
             <div class="banner_img second_img">
-                <button class="order_call">Оставить заявку</button>
+                <button class="order_call" onclick="location.href='#call_master';">Оставить заявку</button>
             </div>
         </div>
         <div class="banner_slide">
             <div class="banner_img third_img">
-                <button class="order_call">Оставить заявку</button>
+                <button class="order_call" onclick="location.href='#call_master';">Оставить заявку</button>
             </div>
         </div>
     </div>
@@ -145,7 +150,7 @@
                 <div class="uk-width-2-3@l">
                     <div class="objects_explain">
                         <h3 class="object_title">Ремонт квартир</h3>
-                        <span>Ремонт офисов</span>
+                        <span onclick="showMoreBlock('2')">Ремонт офисов </span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
                             nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
@@ -157,7 +162,7 @@
                             esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
                             in culpa qui officia deserunt mollit anim id est laborum.
                         </p>
-                        <button>Заказать обратный звонок</button>
+                        <button onclick="location.href='#call_master';">Заказать обратный звонок</button>
                     </div>
                 </div>
             </div>
@@ -170,7 +175,7 @@
                 <div class="uk-width-2-3@l">
                     <div class="objects_explain">
                         <h3 class="object_title">Ремонт офисов</h3>
-                        <span></span>
+                        <span onclick="showMoreBlock('3')"></span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
                             nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
@@ -182,7 +187,7 @@
                             esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
                             in culpa qui officia deserunt mollit anim id est laborum.
                         </p>
-                        <button>Заказать обратный звонок</button>
+                        <button onclick="location.href='#call_master';">Заказать обратный звонок</button>
                     </div>
                 </div>
             </div>
@@ -195,7 +200,7 @@
                 <div class="uk-width-2-3@l">
                     <div class="objects_explain">
                         <h3 class="object_title">Ремонт ванной</h3>
-                        <span></span>
+                        <span onclick="showMoreBlock('4')"></span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
                             nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
@@ -207,7 +212,7 @@
                             esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
                             in culpa qui officia deserunt mollit anim id est laborum.
                         </p>
-                        <button>Заказать обратный звонок</button>
+                        <button onclick="location.href='#call_master';">Заказать обратный звонок</button>
                     </div>
                 </div>
             </div>
@@ -220,7 +225,7 @@
                 <div class="uk-width-2-3@l">
                     <div class="objects_explain">
                         <h3 class="object_title">Установка окон и дверей</h3>
-                        <span></span>
+                        <span onclick="showMoreBlock('5')"></span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
                             nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
@@ -232,7 +237,7 @@
                             esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
                             in culpa qui officia deserunt mollit anim id est laborum.
                         </p>
-                        <button>Заказать обратный звонок</button>
+                        <button onclick="location.href='#call_master';">Заказать обратный звонок</button>
                     </div>
                 </div>
             </div>
@@ -245,7 +250,7 @@
                 <div class="uk-width-2-3@l">
                     <div class="objects_explain">
                         <h3 class="object_title">Установка коммуникаций</h3>
-                        <span></span>
+                        <span onclick="showMoreBlock('6')"></span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
                             nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
@@ -257,7 +262,7 @@
                             esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
                             in culpa qui officia deserunt mollit anim id est laborum.
                         </p>
-                        <button>Заказать обратный звонок</button>
+                        <button onclick="location.href='#call_master';">Заказать обратный звонок</button>
                     </div>
                 </div>
             </div>
@@ -270,7 +275,7 @@
                 <div class="uk-width-2-3@l">
                     <div class="objects_explain">
                         <h3 class="object_title">Установка бытовой техники</h3>
-                        <span></span>
+                        <span onclick="showMoreBlock('1')"></span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
                             nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
@@ -282,7 +287,7 @@
                             esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
                             in culpa qui officia deserunt mollit anim id est laborum.
                         </p>
-                        <button>Заказать обратный звонок</button>
+                        <button onclick="location.href='#call_master';">Заказать обратный звонок</button>
                     </div>
                 </div>
             </div>
@@ -374,107 +379,150 @@
     <div id="call_master">
         <h2>бесплатный вызов мастера на замеры</h2>
         <div class="call_master_wrapper">
-            <div class="uk-grid-collapse uk-child-width-expand@s uk-text-center uk-text-middle" uk-grid>
-                <div>
-                    <input type="text" onfocus="(this.type='date')" placeholder="Выберите удобную дату">
+            <form class="send_mail">
+                <div class="uk-grid-collapse uk-child-width-expand@s uk-text-center uk-text-middle" uk-grid>
+                    <div>
+                        <input type="text" name="date"  onfocus="(this.type='date')" placeholder="Выберите удобную дату">
+                    </div>
+                    <div>
+                        <input type="tel" name="phone" 
+                        maxlenth="30" minlenth="2" required title="Заполните форму" autocomplete="off" class="name phones" 
+                        placeholder="Номер телефона">
+                    </div>
+                    <div>
+                        <input type="text" name="name" pattern="[а-яА-ЯёЁ]{2,64}" required title="Разрешены только буквы кириллицы" 
+                        maxlenth="30" minlenth="2" autocomplete="off" placeholder="Ваше имя">
+                    </div>
+                    <div>
+                        <select name="object">
+                            <option value="0">Выберите тип обькта</option>
+                            <option value="1">Квартира</option>
+                            <option value="2">Офис</option>
+                            <option value="3">Ванная комната</option>
+                            <option value="4">Установка окон и дверей</option>
+                            <option value="5">Установка коммуникаций</option>
+                            <option value="6">Установка техники</option>
+                            <option value="7">Другое</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit" class="button  send_mail">Отправить</button>
+                    </div>
                 </div>
-                <div>
-                    <input type="text"placeholder="Номер телефона">
-                </div>
-                <div>
-                    <input type="text" placeholder="Ваше имя">
-                </div>
-                <div><select name="Выберите тип обькта">
-                        <option value="0">Выберите тип обькта</option>
-                        <option value="1">Квартира</option>
-                        <option value="2">Офис</option>
-                        <option value="3">Ванная комната</option>
-                        <option value="4">Установка окон и дверей</option>
-                        <option value="5">Установка коммуникаций</option>
-                        <option value="6">Установка техники</option>
-                        <option value="7">Другое</option>
-                </select>
-                </div>
-                <div>
-                    <button>Отправить</button>
-                </div>
-            </div>
+            </form>
+        </div>
+        <div class="success_sent_message">
+            <h3>Ваша заявка отправлена! <br>Наши мастера обязательно<br>свяжутся с Вами!</h3>
         </div>
     </div>
-    <h2>Наши работы</h2>
-    <div id="portfolio">
-        <div class="portfolio_slide">
-            <div class="portfolio_img">
-                <div class="our_images">
-                    <div class="first_photo photo"></div>
-                    <div class="second_photo photo"></div>
-                    <div class="third_photo photo"></div>
-                    <div class="fourth_photo photo"></div>
-                </div>
-                <div class="our_txt">
-                    <div class="description">
-                        <h4>Описание обьекта</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, quas voluptatibus quis nulla perferendis sed rem eveniet cum iusto, dolor illum harum, vero esse beatae nam velit reprehenderit expedita nihil doloribus? Necessitatibus provident quas esse nemo expedita nobis dicta sit!</p>
+    <div id="portfolio_wrapper">
+        <h2>Наши работы</h2>
+        <div class="portfolio">
+            <div class="portfolio_slide">
+                <div class="portfolio_img">
+                    <div class="our_images">
+                        <div class="first_photo photo"></div>
+                        <div class="second_photo photo"></div>
+                        <div class="third_photo photo"></div>
+                        <div class="fourth_photo photo"></div>
                     </div>
-                    <div class="feedback">
-                        <h4>Отзыв заказчика</h4>
-                        <h5>Илон Маск</h5>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit ut, nostrum similique maxime reprehenderit non minus vero aperiam aliquid ratione, dolores inventore temporibus rem nesciunt aut voluptates unde, modi numquam!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio_slide">
-            <div class="portfolio_img">
-                <div class="our_images">
-                    <div class="first_photo photo"></div>
-                    <div class="second_photo photo"></div>
-                    <div class="third_photo photo"></div>
-                    <div class="fourth_photo photo"></div>
-                </div>
-                <div class="our_txt">
-                    <div class="description">
-                        <h4>Описание обьекта</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, quas voluptatibus quis nulla perferendis sed rem eveniet cum iusto, dolor illum harum, vero esse beatae nam velit reprehenderit expedita nihil doloribus? Necessitatibus provident quas esse nemo expedita nobis dicta sit!</p>
-                    </div>
-                    <div class="feedback">
-                        <h4>Отзыв заказчика</h4>
-                        <h5>Илон Маск</h5>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit ut, nostrum similique maxime reprehenderit non minus vero aperiam aliquid ratione, dolores inventore temporibus rem nesciunt aut voluptates unde, modi numquam!</p>
+                    <div class="our_txt">
+                        <div class="description">
+                            <h4>Описание обьекта</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, quas voluptatibus quis nulla perferendis sed rem eveniet cum iusto, dolor illum harum, vero esse beatae nam velit reprehenderit expedita nihil doloribus? Necessitatibus provident quas esse nemo expedita nobis dicta sit!</p>
+                        </div>
+                        <div class="feedback">
+                            <h4>Отзыв заказчика</h4>
+                            <h5>Илон Маск</h5>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit ut, nostrum similique maxime reprehenderit non minus vero aperiam aliquid ratione, dolores inventore temporibus rem nesciunt aut voluptates unde, modi numquam!</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="portfolio_slide">
-            <div class="portfolio_img">
-                <div class="our_images">
-                    <div class="first_photo photo"></div>
-                    <div class="second_photo photo"></div>
-                    <div class="third_photo photo"></div>
-                    <div class="fourth_photo photo"></div>
-                </div>
-                <div class="our_txt">
-                    <div class="description">
-                        <h4>Описание обьекта</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, quas voluptatibus quis nulla perferendis sed rem eveniet cum iusto, dolor illum harum, vero esse beatae nam velit reprehenderit expedita nihil doloribus? Necessitatibus provident quas esse nemo expedita nobis dicta sit!</p>
+            <div class="portfolio_slide">
+                <div class="portfolio_img">
+                    <div class="our_images">
+                        <div class="first_photo photo"></div>
+                        <div class="second_photo photo"></div>
+                        <div class="third_photo photo"></div>
+                        <div class="fourth_photo photo"></div>
                     </div>
-                    <div class="feedback">
-                        <h4>Отзыв заказчика</h4>
-                        <h5>Илон Маск</h5>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit ut, nostrum similique maxime reprehenderit non minus vero aperiam aliquid ratione, dolores inventore temporibus rem nesciunt aut voluptates unde, modi numquam!</p>
+                    <div class="our_txt">
+                        <div class="description">
+                            <h4>Описание обьекта</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, quas voluptatibus quis nulla perferendis sed rem eveniet cum iusto, dolor illum harum, vero esse beatae nam velit reprehenderit expedita nihil doloribus? Necessitatibus provident quas esse nemo expedita nobis dicta sit!</p>
+                        </div>
+                        <div class="feedback">
+                            <h4>Отзыв заказчика</h4>
+                            <h5>Илон Маск</h5>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit ut, nostrum similique maxime reprehenderit non minus vero aperiam aliquid ratione, dolores inventore temporibus rem nesciunt aut voluptates unde, modi numquam!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio_slide">
+                <div class="portfolio_img">
+                    <div class="our_images">
+                        <div class="first_photo photo"></div>
+                        <div class="second_photo photo"></div>
+                        <div class="third_photo photo"></div>
+                        <div class="fourth_photo photo"></div>
+                    </div>
+                    <div class="our_txt">
+                        <div class="description">
+                            <h4>Описание обьекта</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, quas voluptatibus quis nulla perferendis sed rem eveniet cum iusto, dolor illum harum, vero esse beatae nam velit reprehenderit expedita nihil doloribus? Necessitatibus provident quas esse nemo expedita nobis dicta sit!</p>
+                        </div>
+                        <div class="feedback">
+                            <h4>Отзыв заказчика</h4>
+                            <h5>Илон Маск</h5>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit ut, nostrum similique maxime reprehenderit non minus vero aperiam aliquid ratione, dolores inventore temporibus rem nesciunt aut voluptates unde, modi numquam!</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div id="our_location">
-            <div id="googleMap" style="width:100%;height:400px;"></div>
+            <script type="text/javascript" charset="utf-8" async 
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A176f1b1fdd760883829865ccb4122233ca9c16c4f889afe9c996485582492923&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
+        <div class="our_contacts">
+            <h5>Наш адрес:</h5>
+            <p class="address"><span>Р</span>еспублика Татарстан, г.Казань, ул. Маршала Чуйкова 570, оф.№ 3..</p>
+            <h5>Часы работы:</h5>
+            <p class="work_hours">
+                <span>П</span>н-<span>C</span>б: 8.00-21.00 <br>
+                <span>В</span>с: 9.00-19.00
+            </p>
+            <h5>Телефон:</h5>
+            <p class="phone">
+                +7 (843) 2 000000, <br>
+                +7 (917) 2 0000 000
+            </p>
+        </div>
+    </div>
+    <div id="footer">
+        <a class="logo_footer" href="#"></a>
+        <ul id="menu">
+            <li><a href="#our_features">Спектр услуг</a></li>
+            <li><a href="#our_prices">Стоимость</a></li>
+            <li><a href="#why_us">Наши преимущеста</a></li>
+            <li><a href="#portfolio_wrapper">Портфолио</a></li>
+            <li><a href="#portfolio_wrapper">Отзывы</a></li>
+            <li><a href="#our_location">Контакты</a></li>
+            <li><a href="tel:+7(843)2000000"><i class="fas fa-phone-alt"></i> +7(843)2000000</a></li>
+            <li><a href="" class="by_Islu_Sh">
+                <p>Дизайн и разработка от</p>
+                <span>Islu Sh.</span>
+            </a></li>
+        </ul>
     </div>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="libs/slick/slick.min.js"></script>
     <script src="libs/uikit/js/uikit.min.js"></script>
     <script src="libs/uikit/js/uikit-icons.min.js"></script>
+    <script src="libs/js/jquery.maskedinput.min.js"text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function(){
           $('#banner').slick({
@@ -486,7 +534,7 @@
             autoplay: true,
             autoplaySpeed: 5000
           });
-          $('#portfolio').slick({
+          $('.portfolio').slick({
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -495,7 +543,67 @@
             
           })
         });
-        let default_title_txt = "Htvjyn jabcjd";
+        $(function() {
+            $.mask.definitions['~'] = "[+-]";
+            
+            $(".phones").mask("+7 (999) 999-9999");
+            
+            $("#phoneAutoclearFalse").mask("+7 (999) 999-9999", { autoclear: false, completed:function(){alert("completed autoclear!");} });
+            $("#phoneExtAutoclearFalse").mask("+7 (999) 999-9999? x99999", { autoclear: false });
+            $("input").blur(function() {
+                $("#info").html("Unmasked value: " + $(this).mask());
+            }).dblclick(function() {
+                $(this).unmask();
+            });
+        });
+        $(".send_mail").on("submit",function(e){
+            e.preventDefault();
+            var form = $(this).closest("form");
+            var btn = $(this).closest("form").find(".button");
+            form.find("input").removeClass("error");
+            var error = 0;
+            var name = form.find("input[name=name]").val();
+            if(name=="")
+            {
+                error=2;
+                if(error==2)
+                {
+                    form.find("input[name=name]").addClass("error");
+                }
+            }
+            var email = form.find("input[email=email]").val();
+            if(email=="")
+            {
+                error=2;
+                if(error==2)
+                {
+                    form.find("input[email=email]").addClass("error");
+                }
+            }
+            var phone = form.find("input[name=phone]").val();
+            if(phone=="")
+            {
+                error=2;
+                if(error==2)
+                {
+                    form.find("input[name=phone]").addClass("error");
+                }
+            }
+            if(error==0){
+                btn.addClass("load");
+                $.ajax({
+                    url: "/js/form.php",
+                    method: "POST",
+                    data: { name:name, phone: phone, email: email},
+                    dataType: "html"
+                }).done(function() {
+                    btn.removeClass("load");
+                    $(".hideForm").hide();
+                    $(".message").show();
+                    $(".messageModal").show();
+                });
+            }
+        });
         function showMoreBlock(blocks_nummer) {
             let current_btn = document.getElementsByClassName('active_btn');
             let pressed_btn = document.getElementsByClassName(blocks_nummer);
@@ -541,14 +649,7 @@
             x.classList.remove("fade-in");
             x.classList.add("fade-out");
         }
-        function myMap() {
-        var mapProp= {
-        center:new google.maps.LatLng(51.508742,-0.120850),
-        zoom:5,
-        };
-        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-        }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+   
 </body>
 </html>

@@ -1,3 +1,83 @@
+@font-face {
+    font-family: Raleway-Black;
+    src: url(../../libs/fonts/Raleway-Black.ttf);
+}
+@font-face {
+    font-family: Raleway-BlackItalic;
+    src: url(../../libs/fonts/Raleway-BlackItalic.ttf);
+}
+@font-face {
+    font-family: Raleway-Bold;
+    src: url(../../libs/fonts/Raleway-Bold.ttf);
+}
+@font-face {
+    font-family: Raleway-BoldItalic;
+    src: url(../../libs/fonts/Raleway-BoldItalic.ttf);
+}
+@font-face {
+    font-family: Raleway-ExtraBold;
+    src: url(../../libs/fonts/Raleway-ExtraBold.ttf);
+}
+@font-face {
+    font-family: Raleway-ExtraBoldItalic;
+    src: url(../../libs/fonts/Raleway-ExtraBoldItalic.ttf);
+}
+@font-face {
+    font-family: Raleway-ExtraLight;
+    src: url(../../libs/fonts/Raleway-ExtraLight.ttf);
+}
+@font-face {
+    font-family: Raleway-ExtraLightItalic;
+    src: url(../../libs/fonts/Raleway-ExtraLightItalic.ttf);
+}
+@font-face {
+    font-family: Raleway-Italic;
+    src: url(../../libs/fonts/Raleway-Italic.ttf);
+}
+@font-face {
+    font-family: Raleway-Light;
+    src: url(../../libs/fonts/Raleway-Light.ttf);
+}
+@font-face {
+    font-family: Raleway-LightItalic;
+    src: url(../../libs/fonts/Raleway-LightItalic.ttf);
+}
+@font-face {
+    font-family: Raleway-Medium;
+    src: url(../../libs/fonts/Raleway-Medium.ttf);
+}
+@font-face {
+    font-family: Raleway-MediumItalic;
+    src: url(../../libs/fonts/Raleway-MediumItalic.ttf);
+}
+@font-face {
+    font-family: Raleway-Regular;
+    src: url(../../libs/fonts/Raleway-Regular.ttf);
+}
+@font-face {
+    font-family: Raleway-SemiBold;
+    src: url(../../libs/fonts/Raleway-SemiBold.ttf);
+}
+@font-face {
+    font-family: Raleway-SemiBoldItalic;
+    src: url(../../libs/fonts/Raleway-SemiBoldItalic.ttf);
+}
+@font-face {
+    font-family: Raleway-Thin;
+    src: url(../../libs/fonts/Raleway-Thin.ttf);
+}
+@font-face {
+    font-family: Raleway-ThinItalic;
+    src: url(../../libs/fonts/Raleway-ThinItalic.ttf);
+}
+/* @font-face {
+    font-family: "Gilroy-Bold";
+    src: url("../fonts/gelroy/Gilroy-Bold.eot");
+    src: url("../fonts/gelroy/Gilroy-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/gelroy/Gilroy-Bold.woff") format("woff"), url("../fonts/gelroy/Gilroy-Bold.ttf") format("truetype"), url("../fonts/gelroy/Gilroy-Bold.svg");
+    font-style: normal;
+    font-weight: normal;
+  } */
+  
 body {
     margin: 0;
 }
@@ -10,7 +90,7 @@ body {
 .logo {
     background-image: url(../img/Haus_Master.png);
     width: 200px;
-    height: 100px;
+    height: 90px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -28,7 +108,7 @@ body {
     width: 14%;
     text-align: center;
     color: #30292b;
-    font-family: Raleway;
+    font-family: Raleway-MediumItalic;
     font-size: 20px;
     font-weight: 500;
     font-style: italic;
@@ -38,11 +118,8 @@ body {
     color: #30292b;
     text-decoration: none;
 }
-#banner {
-    margin-top: 20px;
-}
 #banner h1 {
-    font-family: Raleway;
+    font-family: Raleway-Medium;
     font-style: normal;
     font-weight: 500;
     font-size: 70px;
@@ -75,7 +152,7 @@ body {
     right: 200px;
     border: 1px solid #ffffff;
     color: #442121;
-    font-family: Raleway;
+    font-family: Raleway-Bold;
     font-size: 20px;
     font-weight: 700;
     line-height: 60px;
@@ -90,7 +167,8 @@ body {
     width: 320px;
     right: 190px;
     height: 70px;
-    bottom: 40px;
+    bottom: 45px;
+    line-height: 70px;
 }
 .slick-dots li button:before {
     color: #cfb2b2;
@@ -103,7 +181,7 @@ body {
     opacity: 1;
 }
 h2 {
-    font-family: Raleway;
+    font-family: Raleway-SemiBold;
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
@@ -141,7 +219,7 @@ h2 {
 .feature h3 {
     height: 85px;
     color: rgba(48, 41, 43, 0.95);
-    font-family: Raleway;
+    font-family: Raleway-Medium;
     font-size: 35px;
     font-weight: 500;
     letter-spacing: -1.75px;
@@ -151,7 +229,7 @@ h2 {
 .feature p {
     max-height: 110px;
     color: #281f1f;
-    font-family: Raleway;
+    font-family: Raleway-Medium;
     font-size: 16px;
     font-weight: 500;
     letter-spacing: -0.8px;
@@ -177,7 +255,7 @@ h2 {
 }
 .feature a {
     color: #281f1f;
-    font-family: Raleway;
+    font-family: Raleway-Medium;
     font-size: 18px;
     font-weight: 500;
     letter-spacing: -0.9px;
@@ -209,7 +287,7 @@ h2 {
     letter-spacing: -2px;
     line-height: 60px;
     color: #442121;
-    font-family: "Raleway - Medium";
+    font-family: Raleway-Medium;
     font-size: 40px;
     font-weight: 500;
     margin: 0;
@@ -218,7 +296,7 @@ h2 {
     height: auto;
     max-height: 300px;
     color: #281f1f;
-    font-family: Raleway;
+    font-family: Raleway-Medium;
     font-size: 22px;
     font-weight: 500;
     letter-spacing: -1.1px;
@@ -238,19 +316,20 @@ h2 {
     border-radius: 30px;
     background-color: #e4cdcd;
     color: rgba(68, 33, 33, 0.95);
-    font-family: Raleway;
+    font-family: Raleway-Medium;
     font-size: 26px;
     font-weight: 500;
     letter-spacing: -1.3px;
     line-height: 30px;
     border: 1px solid #e4cdcd;
+    cursor: pointer;
 }
 .objects_explain button:focus {
     outline: none;
 }
 .objects_explain span {
     color: #000000;
-    font-family: Raleway;
+    font-family: Raleway-Medium;
     font-size: 24px;
     font-weight: 500;
     letter-spacing: -1.2px;
@@ -259,6 +338,12 @@ h2 {
     display: inline-block;
     float: right;
     margin-right: 100px;
+    background-image: url(../img/long-arrow-alt-right-solid.svg);
+    background-repeat: no-repeat;
+    background-position: 100% 62%;
+    background-size: 20px;
+    width: 330px;
+    padding-left: 20px;
 }
 .explain_block {
     display: none;
@@ -284,9 +369,8 @@ h2 {
 }
 .price_block h4 {
     color: rgba(40, 31, 31, 0.85);
-    font-family: Raleway;
+    font-family: Raleway-Bold;
     font-size: 30px;
-    font-weight: 700;
     line-height: 60px;
 }
 .price_block span {
@@ -332,9 +416,8 @@ h2 {
 }
 .shirt_txt {
     width: 300px;
-    height: 50px;
     color: #000000;
-    font-family: Raleway;
+    font-family: Raleway-Regular;
     font-size: 45px;
     font-weight: 400;
     letter-spacing: -2.25px;
@@ -355,7 +438,7 @@ h2 {
     max-height: 140px;
     height: auto;
     color: #000000;
-    font-family: Raleway;
+    font-family: Raleway-Regular;
     font-size: 28px;
     font-weight: 400;
     letter-spacing: -1.4px;
@@ -390,7 +473,7 @@ h2 {
     height: 300px;
     background-color: rgba(207, 178, 178, 0.35);
 } 
-#call_master input, select, button {
+#call_master input, #call_master select, #call_master button {
     width: 250px;
     height: 40px;
     position: relative;
@@ -417,9 +500,8 @@ input::placeholder, select, input {
     padding-left: 20px;
     line-height: 38px;
     color: rgba(40, 31, 31, 0.6);
-    font-family: Raleway;
+    font-family: Raleway-Regular;
     font-size: 20px;
-    font-weight: 400;
     letter-spacing: -1px;
 }
 input::placeholder {
@@ -428,12 +510,27 @@ input::placeholder {
 select option {
     font-size: 16px;
 }
-button {
-    font-family: Raleway;
+#call_master button {
+    font-family: Raleway-SemiBold;
     font-size: 20px;
     font-weight: 400;
     letter-spacing: -1px;
     line-height: 36px;
+    box-shadow: 2px 0px 4px 4px #ffffff;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+#call_master button:hover {
+    height: 50px;
+    width: 280px;
+    font-size: 24px;
+    line-height: 40px;
+    transition:             width 1s;
+        -moz-transition:    width 1s;
+        -ms-transition:     width 1s;
+        -o-transition:      width 1s;
+        -webkit-transition: width 1s;
+    border-radius: 20px;
 }
 .portfolio_img {
     height: 500px;
@@ -484,9 +581,8 @@ button {
 }
 .description h4 {
     color: #442121;
-    font-family: Raleway;
+    font-family: Raleway-Medium;
     font-size: 36px;
-    font-weight: 500;
     letter-spacing: -1.8px;
     line-height: 40px;
     /* text-transform: lowercase; */
@@ -494,9 +590,8 @@ button {
 }
 .description p {
     color: #281f1f;
-    font-family: Raleway;
+    font-family: Raleway-Medium;
     font-size: 20px;
-    font-weight: 500;
     letter-spacing: -1px;
     line-height: 36px;
     /* text-transform: lowercase; */
@@ -504,7 +599,7 @@ button {
 }
 .feedback h4 {
     color: #442121;
-    font-family: Raleway;
+    font-family: Raleway-Medium;
     font-size: 36px;
     font-weight: 500;
     letter-spacing: -1.8px;
@@ -515,7 +610,7 @@ button {
 }
 .feedback p, h5 {
     color: #281f1f;
-    font-family: Raleway;
+    font-family: Raleway-Medium;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: -1px;
@@ -543,7 +638,114 @@ h5 {
 .slick-arrow {
     z-index: 999999999999999999999;
 }
-/* .slick-prev, .slick-next {
-    top: 100%;
-    margin-top: 10px;
-} */
+#our_location {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    display: block;
+    margin-top: 80px;
+}
+.our_contacts {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 550px;
+    height: 400px;
+    background-color: #fff;
+    margin-top: -200px;
+    margin-right: 190px;
+}
+.our_contacts h5 {
+    color: rgba(48, 41, 43, 0.95);
+    font-family: Raleway-Medium;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: -1.3px;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    margin-top: 30px;
+}
+.our_contacts p {
+    width: 500px;
+    color: #281f1f;
+    letter-spacing: -0.8px;
+    line-height: 24px;
+    text-transform: lowercase;
+    font-family: Raleway-Italic;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    padding-left: 40px;
+}
+.our_contacts span {
+    text-transform: uppercase;
+}
+.success_sent_message {
+    display: none;
+}
+#footer {
+    width: 100%;
+    height: 70px;
+    background-color: rgba(207, 178, 178, 0.45);
+}
+#footer ul {
+    margin-top: 0;
+}
+.logo_footer {
+    background-image: url(../img/Haus_Master.png);
+    width: 150px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: table-cell;
+}
+#footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: table-cell;
+    vertical-align: middle;
+}
+#footer ul li {
+    display: table-cell;
+    vertical-align: middle;
+    width: 215px;
+    text-align: center;
+    color: #30292b;
+    font-family: Raleway-MediumItalic;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+    text-transform: lowercase;
+}
+#footer ul li a {
+    color: #30292b;
+    text-decoration: none;
+}
+.by_Islu_Sh {
+    color: #30292b;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.9px;
+    line-height: 1;
+    width: 200px;
+    height: 70px;
+    display: inline-block;
+}
+.by_Islu_Sh p {
+    margin: 0;
+    line-height: 35px;
+    font-family: Raleway-Regular;
+    text-transform: lowercase;
+}
+.by_Islu_Sh span {
+    font-family: Raleway-SemiBoldItalic;
+    font-size: 26px;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 30px;
+    text-transform: capitalize;
+}
