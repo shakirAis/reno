@@ -155,6 +155,7 @@ body {
     background-image: url(../img/banner.jpg);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 .order_call {
     width: 300px;
@@ -207,6 +208,7 @@ h2 {
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: rgba(40, 31, 31, 0.85);
     margin: 60px 0 30px 0;
+    padding-top: 20px;
 }
 .appartment {
     background-color: rgba(207, 178, 178, 0.2);
@@ -279,7 +281,7 @@ h2 {
     position: absolute;
     bottom: 30px;
     left: 50%;
-    margin-left: -80px;
+    transform: translateX(-50%);
     text-decoration: underline;
 }
 #more_wrapper {
@@ -378,6 +380,7 @@ h2 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    background-position: 50%;
 }
 .apparts_price {
     background-image: url(../img/2-layers\ \(3\).jpg);
@@ -387,6 +390,9 @@ h2 {
     font-family: Raleway-Bold;
     font-size: 30px;
     line-height: 50px;
+}
+.price_block h4 span.price {
+    font-variant-numeric: lining-nums;
 }
 .price_block span {
     font-size: 45px;
@@ -490,7 +496,7 @@ h2 {
     background-color: rgba(207, 178, 178, 0.35);
 } 
 #call_master input, #call_master select, #call_master button {
-    width: 250px;
+    width: 300px;
     height: 40px;
     position: relative;
     transform: translateY(-50%);
@@ -604,7 +610,6 @@ select option {
     font-size: 36px;
     letter-spacing: -1.8px;
     line-height: 40px;
-    /* text-transform: lowercase; */
     text-align: center;
 }
 .description p {
@@ -613,7 +618,6 @@ select option {
     font-size: 20px;
     letter-spacing: -1px;
     line-height: 36px;
-    /* text-transform: lowercase; */
     text-align: justify;
 }
 .feedback h4 {
@@ -623,7 +627,6 @@ select option {
     font-weight: 500;
     letter-spacing: -1.8px;
     line-height: 40px;
-    /* text-transform: lowercase; */
     text-align: center;
 
 }
@@ -634,7 +637,6 @@ select option {
     font-weight: 500;
     letter-spacing: -1px;
     line-height: 36px;
-    /* text-transform: lowercase; */
     margin: 0;
 }
 h5 {
@@ -694,11 +696,12 @@ h5 {
     color: #281f1f;
     letter-spacing: -0.8px;
     line-height: 24px;
-    font-family: Raleway-Italic;
+    font-family: "Raleway-Italic";
     font-size: 16px;
     font-weight: 400;
     font-style: italic;
     padding-left: 40px;
+    font-variant-numeric: lining-nums;
 }
 .success_sent_message {
     display: none;
@@ -770,8 +773,602 @@ h5 {
 #actualDate, .phone_input {
     font-family: serif;
 }
+.big_one {
+    display: block;
+}
+.small_one {
+    display: none;
+}
+.our_contacts {
+    border: 2px solid rgba(207, 178, 178, 0.7);
+    box-sizing: border-box;
+}
 
+@media only screen and (min-width: 1201px) and (max-width: 1700px) {
+    .logo {
+        width: 100px;
+    }
+    #header ul li {
+        width: 13%;
+        font-size: 18px;
+        line-height: 20px;
+        vertical-align: -webkit-baseline-middle;
+    }
+    #banner h1 {
+        font-size: 40px;
+    }
+    .feature h3 {
+        font-size: 22px;
+        line-height: 26px;
+        height: auto;
+    }
+    .feature p {
+        padding: 0 15px;
+    }
+    .feature a {
+        width: 200px;
+        height: 50px;
+    }
+    .order_call {
+        width: 300px;
+        bottom: 30px;
+        height: 50px;
+        line-height: 50px;
+        right: 100px;
+    }
+    .order_call:hover {
+        width: 260px;
+        height: 40px;
+        bottom: 25px;
+        line-height: 40px;
+    }
+    .objects_explain p {
+        padding: 20px;
+        width: auto;
+        font-size: 18px;
+        line-height: 1;
+        max-height: 300px;
+        height: auto;
+        margin-top: 30px;
+    }
+    .objects_photo {
+        width: 100%;
+        margin: 0;
+        height: auto;
+        min-height: 400px;
+        max-height: 500px;
+    }
+    #more_wrapper {
+        height: auto;
+        min-height: 400px;
+        max-height: 500px;
+    }
+    .objects_explain {
+        height: auto;
+        min-height: 480px;
+        max-height: 480px;
+    }
+    .objects_explain button {
+        bottom: 0;
+        width: 300px;
+        height: 60px;
+        font-size: 20px;
+        margin-left: -150px;
+    }
+    .objects_explain span {
+        width: 300px;
+        font-size: 18px;
+        margin-right: 20px;
+    }
+    .price_block {
+        width: 100%;
+    }
+    .first_adv {
+        float: none;
+        margin-left: 0;
+    }
+    .middle2_adv {
+        margin-left: 0;
+    }
+    .middle1_adv {
+        margin-right: 0;
+    }
+    .last_adv {
+        margin-right: 0;
+        float: none;
+    }
+    .call_master_wrapper div {
+        height: 100px;
+    }
+    input::placeholder, select, input {
+        font-size: 16px;
+    }
+    #call_master h2 {
+        padding-top: 20px;
+    }
+    .photo {
+        width: 50%;
+    }
+    .first_photo {
+        width: 60%;
+    }
+    .second_photo {
+        width: 40%;
+    }
+    .description p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .feedback p, h5 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .feedback h5 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .description h4, .feedback h4  {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    #footer ul li, .by_Islu_Sh {
+        font-size: 14px;
+    }
+    .by_Islu_Sh span {
+        font-size: 20px;
+    }
+    .price_block h4 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .price_block span {
+        font-size: 34px;
+        line-height: 40px;
+    }
+    .advantages {
+        width: 250px;
+        height: 250px;
+    }
+    .shirt_txt {
+        width: 250px;
+    }
+    .long_txt {
+        width: 250px;
+    }
+}
 
+@media only screen and (min-width: 943px) and (max-width: 1200px) {
+    #call_master input, #call_master select, #call_master button {
+        width: 220px;
+    }
+    .logo {
+        width: 100px;
+    }
+    #header ul li {
+        width: 13%;
+        font-size: 18px;
+        line-height: 20px;
+        vertical-align: -webkit-baseline-middle;
+    }
+    .phone_number i {
+        display: none;
+    }
+    #banner h1 {
+        font-size: 40px;
+    }
+    .feature h3 {
+        font-size: 22px;
+        line-height: 26px;
+        height: auto;
+    }
+    .feature p {
+        padding: 0 15px;
+    }
+    .feature a {
+        width: 120px;
+        height: 50px;
+    }
+    .order_call {
+        width: 250px;
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 20px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .order_call:hover {
+        width: 260px;
+        height: 40px;
+        bottom: 25px;
+        line-height: 40px;
+    }
+    .objects_explain p {
+        padding: 20px;
+        width: auto;
+        font-size: 18px;
+        line-height: 1;
+        max-height: 300px;
+        height: auto;
+        margin-top: 30px;
+    }
+    .objects_photo {
+        width: 100%;
+        margin: 0;
+        height: auto;
+        min-height: 400px;
+        max-height: 500px;
+    }
+    #more_wrapper {
+        height: auto;
+        min-height: 400px;
+        max-height: 500px;
+    }
+    .objects_explain {
+        height: auto;
+        min-height: 400px;
+        max-height: 500px;
+    }
+    .objects_explain button {
+        bottom: 0;
+        width: 260px;
+        height: 40px;
+        font-size: 20px;
+        margin-left: -130px;
+    }
+    .objects_explain span {
+        width: 300px;
+        font-size: 18px;
+        margin-right: 20px;
+    }
+    .price_block {
+        width: 100%;
+    }
+    .first_adv {
+        float: none;
+        margin-left: 0;
+    }
+    .middle2_adv {
+        margin-left: 0;
+    }
+    .middle1_adv {
+        margin-right: 0;
+    }
+    .last_adv {
+        margin-right: 0;
+        float: none;
+    }
+    .call_master_wrapper div {
+        height: 100px;
+    }
+    input::placeholder, select, input {
+        font-size: 16px;
+    }
+    #call_master h2 {
+        padding-top: 20px;
+    }
+    .photo {
+        width: 50%;
+    }
+    .first_photo {
+        width: 60%;
+    }
+    .second_photo {
+        width: 40%;
+    }
+    .description p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .feedback p, h5 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .feedback h5 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .description h4, .feedback h4  {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    #footer ul li, .by_Islu_Sh {
+        font-size: 14px;
+    }
+    .by_Islu_Sh span {
+        font-size: 20px;
+    }
+    .price_block h4 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .price_block span {
+        font-size: 34px;
+        line-height: 40px;
+    }
+    .advantages {
+        width: 200px;
+        height: 200px;
+    }
+    .shirt_txt {
+        width: 200px;
+    }
+    .long_txt {
+        width: 200px;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 942px) {
+    #header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: block;
+        visibility: hidden;
+    }
+    #header ul li {
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: #30292b;
+        font-family: Raleway-MediumItalic;
+        font-size: 20px;
+        font-weight: 500;
+        font-style: italic;
+        line-height: 60px;
+    }
+    #header {
+        display: block;
+    }
+    #banner h1 {
+        width: 100%;
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .price_block {
+        width: 100%;
+    }
+    .objects_explain button {
+        width: 230px;
+        margin-left: -100px;
+        font-size: 14px;
+        height: 50px;
+        bottom: 0;
+    }
+    #footer {
+        display: none;
+    }
+    .order_call {
+        width: 250px;
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 20px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .order_call:hover {
+        width: 260px;
+        height: 40px;
+        bottom: 25px;
+        line-height: 40px;
+    }
+    .objects_explain p {
+        padding: 20px;
+        width: auto;
+        font-size: 16px;
+        line-height: 1;
+        max-height: 300px;
+        height: auto;
+        margin-top: 30px;
+    }
+    .objects_photo {
+        width: 100%;
+        margin: 0;
+        height: auto;
+        min-height: 400px;
+        max-height: 500px;
+    }
+    #more_wrapper {
+        height: auto;
+        margin-top: 0;
+    }
+    .objects_explain span {
+        margin-right: 0;
+        width: 100%;
+        font-size: 20px;
+        background-position: 95% 62%;
+        text-decoration: underline;
+    }
+    .objects_explain {
+        height: auto;
+        min-height: 400px;
+        max-height: 500px;
+    }
+    .first_adv {
+        margin-left: 0;
+        float: none;
+    }
+    .middle1_adv {
+        margin-right: 0;
+    }
+    .last_adv {
+        margin-right: 0;
+        float: none;
+    }
+    .shirt_txt {
+        width: auto;
+    }
+    .middle2_adv {
+        margin-left: 0;
+    }
+    .advantages img {
+        right: 0;
+    }
+    h2 {
+      font-size: 30px;
+      letter-spacing: -0.07em; 
+      line-height: 40px;
+    }
+    .call_master_wrapper div {
+        height: 50px;
+    }
+    #call_master {
+        height: 400px;
+    }
+    #call_master h2 {
+        padding-top: 30px;
+    }
+    .photo {
+        height: 200px;
+        width: 50%;
+    }
+    .our_txt {
+        width: 100%;
+        height: 300px;
+        font-size: 14px;
+        line-height: 15px;
+        margin-top: 60px;
+    }
+    .our_images {
+        width: 100%;
+    }
+    .portfolio_img {
+        height: auto;
+    }
+    .description, .feedback {
+        height: auto;
+    }
+    .our_contacts {
+        width: 49%;
+        height: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        display: inline-block;
+        border: none;
+    }
+    .our_contacts p  {
+        padding-left: 20px;
+    }
+    #header button {
+        background: none;
+        border: none;
+        font-size: 50px;
+        width: 100px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100px;
+        display: none;
+    }
+    .logo {
+        width: 100px;
+    }
+    #header ul.active {
+        visibility: visible;
+        opacity: 1;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+    }
+    .hidden {
+        overflow: hidden;
+        visibility: hidden;
+    }
+    .close_button {
+        display: none;
+    }
+    .banner_img {
+        height: 300px;
+    }
+    .feature {
+        display: none;
+    }
+    .objects_explain h3 {
+        line-height: 40px;
+        font-size: 26px;
+    }
+    #header button.burger {
+        display: block;
+    }
+    .description p {
+        padding: 0 20px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .feedback p {
+        padding: 0 20px;
+        text-align: justify;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .feedback h5 {
+        padding: 0 20px;
+        font-size: 17px;
+        line-height: 20px;
+    }
+    .slick-prev, .slick-next {
+        top: 55%;
+        width: 50px;
+    }
+    .slick-next {
+        right: 25px;
+    }
+    .slick-prev:before, .slick-next:before {
+        font-size: 50px;
+        color: rgba(207, 178, 178, 0.35);
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+    }
+    .slick-prev {
+        left: 25px;
+    }
+    .big_one {
+        display: none;
+    }
+    .small_one {
+        display: inline;
+        height: auto;
+        min-height: 450px;
+    }
+    .map_frame {
+        height: auto;
+    }
+    .our_contacts h5 {
+        margin-top: 0;
+    }
+    .map_frame .small_one img {
+        width: 100%;
+    }
+    .name_input, .choosen_object {
+        margin-top: 50px;
+    }
+    .send_mail_button {
+        margin-top: 100px;
+    }
+    .small_one a img {
+        width: 50%;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        height: auto;
+        min-height: 450px;
+    }
+    #our_location {
+        margin-top: 50px;
+        height: auto;
+        min-height: 450px;
+    }
+    input::placeholder, select, input {
+        font-size: 16px;
+    }
+    .send_mail_form {
+        margin-top: 40px;
+    }
+}
 @media only screen and (max-width: 500px) {
     #header ul {
         list-style-type: none;
@@ -815,9 +1412,15 @@ h5 {
         width: 250px;
         right: 50%;
         transform: translateX(50%);
-        bottom: 20px;
+        bottom: 30px;
         height: 30px;
         line-height: 30px;
+    }
+    .order_call:hover {
+        width: 260px;
+        height: 40px;
+        bottom: 25px;
+        line-height: 40px;
     }
     .objects_explain p {
         padding: 20px;
@@ -868,12 +1471,17 @@ h5 {
       font-size: 30px;
       letter-spacing: -0.07em; 
       line-height: 40px;
+      padding: 0 20px;
     }
     .call_master_wrapper div {
         height: 50px;
     }
     #call_master {
         height: 400px;
+    }
+    #call_master h2 {
+        padding-top: 20px;
+        margin-bottom: 10px;
     }
     .photo {
         height: 200px;
@@ -897,10 +1505,11 @@ h5 {
     }
     .our_contacts {
         width: 100%;
-        height: 400px;
+        height: auto;
         bottom: 0;
         right: 0;
         position: relative;
+        border: none;
     }
     .our_contacts p  {
         padding-left: 20px;
@@ -940,7 +1549,9 @@ h5 {
         display: none;
     }
     .objects_explain {
-        height: 550px;
+        height: auto;
+        min-height: 450px;
+        max-height: 500px;
     }
     .objects_explain h3 {
         line-height: 40px;
@@ -966,13 +1577,49 @@ h5 {
         line-height: 20px;
     }
     .slick-prev, .slick-next {
-        top: 47%;
+        top: 50%;
+        width: 50px;
+    }
+    .slick-next {
+        right: 25px;
     }
     .slick-prev:before, .slick-next:before {
         font-size: 50px;
         color: rgba(207, 178, 178, 0.35);
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
     }
     .slick-prev {
         left: 25px;
+    }
+    .big_one {
+        display: none;
+    }
+    .small_one {
+        display: block;
+    }
+    .map_frame {
+        height: auto;
+    }
+    .our_contacts h5 {
+        margin-top: 0;
+    }
+    input::placeholder, select, input {
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .slick-prev, .slick-next {
+        top: 46%;
+    }
+    h2 {
+        padding: 0;
+    }
+    .objects_explain {
+        height: auto;
+        min-height: 530px;
+        max-height: 600px;
     }
 }
