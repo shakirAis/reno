@@ -18,6 +18,8 @@
 <body>
     <div id="header">
         <a class="logo" href="#"></a>
+        <button onclick="openMenu()" class="burger"><i class="fas fa-bars"></i></button>
+        <button onclick="closeMenu()" class="close_button"><i class="fas fa-times"></i></button>
         <ul id="menu">
             <li><a href="#our_features">Спектр услуг</a></li>
             <li><a href="#our_prices">Стоимость</a></li>
@@ -25,7 +27,7 @@
             <li><a href="#portfolio_wrapper">Портфолио</a></li>
             <li><a href="#portfolio_wrapper">Отзывы</a></li>
             <li><a href="#our_location">Контакты</a></li>
-            <li><a href="tel:+7(843)2000000"><i class="fas fa-phone-alt"></i> +7(843)2000000</a></li>
+            <li><a href="tel:+7(843)2000000" class="phone_number"><i class="fas fa-phone-alt"></i> +7(843)2000000</a></li>
         </ul> 
     </div>
     <div id="banner">
@@ -379,22 +381,22 @@
     <div id="call_master">
         <h2>бесплатный вызов мастера на замеры</h2>
         <div class="call_master_wrapper">
-            <form class="send_mail">
+            <form class="send_mail_form">
                 <div class="uk-grid-collapse uk-child-width-expand@s uk-text-center uk-text-middle" uk-grid>
                     <div>
-                        <input type="text" name="date"  onfocus="(this.type='date')" placeholder="Выберите удобную дату">
+                        <input type="text" name="date"  class="date_input" onfocus="(this.type = 'date'), open_date()" placeholder="Выберите удобную дату" id="actualDate">
                     </div>
                     <div>
                         <input type="tel" name="phone" 
-                        maxlenth="30" minlenth="2" required title="Заполните форму" autocomplete="off" class="name phones" 
+                        maxlenth="30" minlenth="2" required title="Заполните форму" autocomplete="off" class="phone_input" 
                         placeholder="Номер телефона">
                     </div>
                     <div>
-                        <input type="text" name="name" pattern="[а-яА-ЯёЁ]{2,64}" required title="Разрешены только буквы кириллицы" 
+                        <input type="text" name="name" class="name_input" pattern="[а-яА-ЯёЁ]{2,64}" required title="Разрешены только буквы кириллицы" 
                         maxlenth="30" minlenth="2" autocomplete="off" placeholder="Ваше имя">
                     </div>
                     <div>
-                        <select name="object">
+                        <select name="object" class="choosen_object">
                             <option value="0">Выберите тип обькта</option>
                             <option value="1">Квартира</option>
                             <option value="2">Офис</option>
@@ -406,7 +408,7 @@
                         </select>
                     </div>
                     <div>
-                        <button type="submit" class="button  send_mail">Отправить</button>
+                        <button type="submit" onclick="send_mail()" class="send_mail_button">Отправить</button>
                     </div>
                 </div>
             </form>
@@ -484,15 +486,17 @@
         </div>
     </div>
     <div id="our_location">
-            <script type="text/javascript" charset="utf-8" async 
-            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A176f1b1fdd760883829865ccb4122233ca9c16c4f889afe9c996485582492923&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
+        <div class="map_frame">
+                <script type="text/javascript" charset="utf-8" async 
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A176f1b1fdd760883829865ccb4122233ca9c16c4f889afe9c996485582492923&amp;width=100%&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
         <div class="our_contacts">
             <h5>Наш адрес:</h5>
-            <p class="address"><span>Р</span>еспублика Татарстан, г.Казань, ул. Маршала Чуйкова 570, оф.№ 3..</p>
+            <p class="address">Республика Татарстан, г.Казань, ул. Маршала Чуйкова 570, оф.№ 3..</p>
             <h5>Часы работы:</h5>
             <p class="work_hours">
-                <span>П</span>н-<span>C</span>б: 8.00-21.00 <br>
-                <span>В</span>с: 9.00-19.00
+                Пн-Cб: 8.00-21.00 <br>
+                Вс: 9.00-19.00
             </p>
             <h5>Телефон:</h5>
             <p class="phone">
@@ -510,8 +514,8 @@
             <li><a href="#portfolio_wrapper">Портфолио</a></li>
             <li><a href="#portfolio_wrapper">Отзывы</a></li>
             <li><a href="#our_location">Контакты</a></li>
-            <li><a href="tel:+7(843)2000000"><i class="fas fa-phone-alt"></i> +7(843)2000000</a></li>
-            <li><a href="" class="by_Islu_Sh">
+            <li><a href="tel:+7(843)2000000" class="phone_number"><i class="fas fa-phone-alt"></i> +7(843)2000000</a></li>
+            <li><a href="https://resume.iboz.eu/" target="_blank" class="by_Islu_Sh">
                 <p>Дизайн и разработка от</p>
                 <span>Islu Sh.</span>
             </a></li>
@@ -556,54 +560,49 @@
                 $(this).unmask();
             });
         });
-        $(".send_mail").on("submit",function(e){
+        function send_mail(e) {
             e.preventDefault();
-            var form = $(this).closest("form");
-            var btn = $(this).closest("form").find(".button");
-            form.find("input").removeClass("error");
-            var error = 0;
-            var name = form.find("input[name=name]").val();
-            if(name=="")
-            {
-                error=2;
-                if(error==2)
-                {
-                    form.find("input[name=name]").addClass("error");
-                }
+
+            let name = document.getElementsByClassName("name_input")[0];
+            let name_value = name.value;
+            let phone = document.getElementsByClassName("phone_input")[0];
+            let phone_value = phone.value;
+            let choosenDate = document.getElementsByClassName("date_input")[0];
+            let choosenDate_value = choosenDate.value;
+            let choosenObject = document.getElementsByClassName("choosen_object")[0];
+            let choosenObject_value = choosenObject.value;
+            let send_mail_button = document.getElementsByClassName('send_mail_button')[0];
+            let error = 0;
+
+
+            if (name_value === '' || name_value === undefined) {
+                error = 1;
+                name.classList.add('error');
+            } else if (phone_value === '' || phone_value === undefined) {
+                error = 1;
+                phone.classList.add('error');
+            } else if (choosenDate_value === '' || choosenDate_value === undefined) {
+                error = 1;
+                choosenDate.classList.add('error');
+            } else if (choosenObject_value === '' || choosenObject_value === undefined) {
+                error = 1;
+                choosenObject.classList.add('error');
             }
-            var email = form.find("input[email=email]").val();
-            if(email=="")
-            {
-                error=2;
-                if(error==2)
-                {
-                    form.find("input[email=email]").addClass("error");
-                }
-            }
-            var phone = form.find("input[name=phone]").val();
-            if(phone=="")
-            {
-                error=2;
-                if(error==2)
-                {
-                    form.find("input[name=phone]").addClass("error");
-                }
-            }
-            if(error==0){
-                btn.addClass("load");
+            if (error === 0) {
+                send_mail_button.classList.add('load');
                 $.ajax({
-                    url: "/js/form.php",
+                    url: "./libs/php/form.php",
                     method: "POST",
-                    data: { name:name, phone: phone, email: email},
+                    data: { name:name_value, phone: phone_value, choosenDate: choosenDate_value, 
+                        choosenObject: choosenObject_value },
                     dataType: "html"
                 }).done(function() {
-                    btn.removeClass("load");
-                    $(".hideForm").hide();
-                    $(".message").show();
-                    $(".messageModal").show();
+                    send_mail_button.classList.remove('load');
+                    $(".send_mail_form").hide();
+                    $(".success_sent_message").show();
                 });
             }
-        });
+        }
         function showMoreBlock(blocks_nummer) {
             let current_btn = document.getElementsByClassName('active_btn');
             let pressed_btn = document.getElementsByClassName(blocks_nummer);
@@ -648,6 +647,53 @@
             long_txt.style.display = "none";
             x.classList.remove("fade-in");
             x.classList.add("fade-out");
+        }
+        function open_date() {
+            let current_date = new Date().toISOString().slice(0,10);
+            document.getElementById("actualDate").value = current_date;
+        }
+        function openMenu() {
+            let header = document.getElementById('header');
+            let menu = header.getElementsByTagName('ul')[0];
+            menu.classList.add('active');
+            let my_body = document.getElementsByTagName("BODY")[0];
+            my_body.classList.add('hidden');
+            let burger = document.getElementsByClassName('burger')[0];
+            burger.style.display = 'none';
+            let close_button = document.getElementsByClassName('close_button')[0];
+            close_button.style.display = 'block';
+            header.style.visibility = 'visible';
+        }
+        function closeMenu() {
+            let header = document.getElementById('header');
+            let menu = header.getElementsByTagName('ul')[0];
+            menu.classList.remove('active');
+            let my_body = document.getElementsByTagName("BODY")[0];
+            my_body.classList.remove('hidden');
+            let burger = document.getElementsByClassName('burger')[0];
+            let close_button = document.getElementsByClassName('close_button')[0];
+            close_button.style.display = 'none';
+
+            if (matchMedia) {
+            const mq = window.matchMedia("(max-width: 500px)");
+            mq.addListener(WidthChange);
+            WidthChange(mq);
+            }
+            function WidthChange(mq) {
+                if (mq.matches) {
+                    burger.style.display = 'block';
+                } else {
+                    burger.style.display = 'none';
+                }
+            }
+        }
+        let menu = document.getElementById('menu');
+        let menu_links = menu.getElementsByTagName('a');
+        let element;
+        for (element of menu_links) {
+            element.onclick = function() {
+                closeMenu();
+            }
         }
     </script>
    

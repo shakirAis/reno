@@ -87,6 +87,12 @@ body {
     background-color: rgba(207, 178, 178, 0.45);
     display: table;
 }
+#header button {
+    display: none;
+}
+.burger {
+    display: none;
+}
 .logo {
     background-image: url(../img/Haus_Master.png);
     width: 200px;
@@ -114,6 +120,9 @@ body {
     font-style: italic;
     line-height: 60px;
 }
+.phone_number {
+    font-family: sans-serif;
+}
 #header ul li a {
     color: #30292b;
     text-decoration: none;
@@ -123,13 +132,18 @@ body {
     font-style: normal;
     font-weight: 500;
     font-size: 70px;
-    line-height: 450px;
+    line-height: 70px;
+    display: block;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
     margin: 0;
     align-items: center;
     text-align: center;
     letter-spacing: -0.05em;
     font-feature-settings: 'pnum' on, 'onum' on;
     color: rgba(40, 31, 31, 0.85);
+    width: 100%;
 }
 .banner_img {
     width: 100%;
@@ -234,7 +248,7 @@ h2 {
     font-weight: 500;
     letter-spacing: -0.8px;
     line-height: 22px;
-    text-transform: lowercase;
+    text-transform: normal;
     color: #281f1f;
     text-align: justify;
     overflow: hidden;
@@ -297,11 +311,11 @@ h2 {
     max-height: 300px;
     color: #281f1f;
     font-family: Raleway-Medium;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
     letter-spacing: -1.1px;
     line-height: 36px;
-    text-transform: lowercase;
+    text-transform: normal;
     padding: 50px 50px 0 0;
     text-align: justify;
     margin-top: 0;
@@ -334,7 +348,7 @@ h2 {
     font-weight: 500;
     letter-spacing: -1.2px;
     line-height: 40px;
-    text-transform: lowercase;
+    text-transform: normal;
     display: inline-block;
     float: right;
     margin-right: 100px;
@@ -344,6 +358,7 @@ h2 {
     background-size: 20px;
     width: 330px;
     padding-left: 20px;
+    cursor: pointer;
 }
 .explain_block {
     display: none;
@@ -371,10 +386,11 @@ h2 {
     color: rgba(40, 31, 31, 0.85);
     font-family: Raleway-Bold;
     font-size: 30px;
-    line-height: 60px;
+    line-height: 50px;
 }
 .price_block span {
-    font-size: 50px;
+    font-size: 45px;
+    line-height: 50px;
 }
 .offices_price {
     background-image: url(../img/2-layers\ \(4\).jpg);
@@ -418,7 +434,7 @@ h2 {
     width: 300px;
     color: #000000;
     font-family: Raleway-Regular;
-    font-size: 45px;
+    font-size: 35px;
     font-weight: 400;
     letter-spacing: -2.25px;
     line-height: 50px;
@@ -443,7 +459,7 @@ h2 {
     font-weight: 400;
     letter-spacing: -1.4px;
     line-height: 30px;
-    text-transform: lowercase;
+    text-transform: normal;
     position: relative;
     transform: translateY(-50%);
     top: 50%;
@@ -539,6 +555,9 @@ select option {
     margin: -4px;
     padding: 0;
     display: inline-block;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .first_photo {
     width: 650px;
@@ -645,15 +664,19 @@ h5 {
     display: block;
     margin-top: 80px;
 }
+.map_frame {
+    width: 100%;
+    height: 500px;
+    display: inline-block;
+}
 .our_contacts {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    width: 550px;
+    width: 55%;
     height: 400px;
     background-color: #fff;
-    margin-top: -200px;
-    margin-right: 190px;
+    display: inline-block;
+    position: absolute;
+    top: 50px;
+    right: 50px;
 }
 .our_contacts h5 {
     color: rgba(48, 41, 43, 0.95);
@@ -668,19 +691,14 @@ h5 {
     margin-top: 30px;
 }
 .our_contacts p {
-    width: 500px;
     color: #281f1f;
     letter-spacing: -0.8px;
     line-height: 24px;
-    text-transform: lowercase;
     font-family: Raleway-Italic;
     font-size: 16px;
     font-weight: 400;
     font-style: italic;
     padding-left: 40px;
-}
-.our_contacts span {
-    text-transform: uppercase;
 }
 .success_sent_message {
     display: none;
@@ -719,7 +737,7 @@ h5 {
     font-size: 20px;
     font-weight: 500;
     font-style: italic;
-    text-transform: lowercase;
+    text-transform: normal;
 }
 #footer ul li a {
     color: #30292b;
@@ -739,7 +757,7 @@ h5 {
     margin: 0;
     line-height: 35px;
     font-family: Raleway-Regular;
-    text-transform: lowercase;
+    text-transform: normal;
 }
 .by_Islu_Sh span {
     font-family: Raleway-SemiBoldItalic;
@@ -748,4 +766,213 @@ h5 {
     font-style: italic;
     line-height: 30px;
     text-transform: capitalize;
+}
+#actualDate, .phone_input {
+    font-family: serif;
+}
+
+
+@media only screen and (max-width: 500px) {
+    #header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: block;
+        visibility: hidden;
+    }
+    #header ul li {
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: #30292b;
+        font-family: Raleway-MediumItalic;
+        font-size: 20px;
+        font-weight: 500;
+        font-style: italic;
+        line-height: 60px;
+    }
+    #header {
+        display: block;
+    }
+    #banner h1 {
+        width: 100%;
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .price_block {
+        width: 100%;
+    }
+    .objects_explain button {
+        width: 300px;
+        margin-left: -150px;
+        font-size: 16px;
+        bottom: 0;
+    }
+    #footer {
+        display: none;
+    }
+    .order_call {
+        width: 250px;
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 20px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .objects_explain p {
+        padding: 20px;
+        width: auto;
+        font-size: 16px;
+        line-height: 1;
+        max-height: 300px;
+        height: auto;
+        margin-top: 30px;
+    }
+    .objects_photo {
+        width: 100%;
+        margin: 0;
+        height: 300px;
+    }
+    #more_wrapper {
+        height: auto;
+        margin-top: 0;
+    }
+    .objects_explain span {
+        margin-right: 0;
+        width: 100%;
+        font-size: 20px;
+        background-position: 95% 62%;
+        text-decoration: underline;
+    }
+    .first_adv {
+        margin-left: 0;
+        float: none;
+    }
+    .middle1_adv {
+        margin-right: 0;
+    }
+    .last_adv {
+        margin-right: 0;
+        float: none;
+    }
+    .shirt_txt {
+        width: auto;
+    }
+    .middle2_adv {
+        margin-left: 0;
+    }
+    .advantages img {
+        right: 0;
+    }
+    h2 {
+      font-size: 30px;
+      letter-spacing: -0.07em; 
+      line-height: 40px;
+    }
+    .call_master_wrapper div {
+        height: 50px;
+    }
+    #call_master {
+        height: 400px;
+    }
+    .photo {
+        height: 200px;
+        width: 50%;
+    }
+    .our_txt {
+        width: 100%;
+        height: 300px;
+        font-size: 14px;
+        line-height: 15px;
+        margin-top: 60px;
+    }
+    .our_images {
+        width: 100%;
+    }
+    .portfolio_img {
+        height: auto;
+    }
+    .description, .feedback {
+        height: auto;
+    }
+    .our_contacts {
+        width: 100%;
+        height: 400px;
+        bottom: 0;
+        right: 0;
+        position: relative;
+    }
+    .our_contacts p  {
+        padding-left: 20px;
+    }
+    #header button {
+        background: none;
+        border: none;
+        font-size: 50px;
+        width: 100px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100px;
+        display: none;
+    }
+    .logo {
+        width: 100px;
+    }
+    #header ul.active {
+        visibility: visible;
+        opacity: 1;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+    }
+    .hidden {
+        overflow: hidden;
+        visibility: hidden;
+    }
+    .close_button {
+        display: none;
+    }
+    .banner_img {
+        height: 300px;
+    }
+    .feature {
+        display: none;
+    }
+    .objects_explain {
+        height: 550px;
+    }
+    .objects_explain h3 {
+        line-height: 40px;
+        font-size: 26px;
+    }
+    #header button.burger {
+        display: block;
+    }
+    .description p {
+        padding: 0 20px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .feedback p {
+        padding: 0 20px;
+        text-align: justify;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .feedback h5 {
+        padding: 0 20px;
+        font-size: 17px;
+        line-height: 20px;
+    }
+    .slick-prev, .slick-next {
+        top: 47%;
+    }
+    .slick-prev:before, .slick-next:before {
+        font-size: 50px;
+        color: rgba(207, 178, 178, 0.35);
+    }
+    .slick-prev {
+        left: 25px;
+    }
 }
