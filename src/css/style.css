@@ -207,7 +207,7 @@ h2 {
     text-transform: uppercase;
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: rgba(40, 31, 31, 0.85);
-    margin: 60px 0 30px 0;
+    margin: 60px 0 0 0;
     padding-top: 20px;
 }
 .appartment {
@@ -507,7 +507,7 @@ h2 {
     box-sizing: border-box;
 }
 .call_master_wrapper div {
-    height: 200px;
+    height: 150px;
 }
 .suitable_time {
     margin-top: 40px;
@@ -531,6 +531,8 @@ input::placeholder {
 }
 select option {
     font-size: 16px;
+    outline: none;
+    border: none;
 }
 #call_master button {
     font-family: Raleway-SemiBold;
@@ -539,8 +541,10 @@ select option {
     letter-spacing: -1px;
     line-height: 36px;
     box-shadow: 2px 0px 4px 4px #ffffff;
+    background-color: #fff;
     box-sizing: border-box;
     cursor: pointer;
+    outline: none;
 }
 #call_master button:hover {
     height: 50px;
@@ -553,6 +557,20 @@ select option {
         -o-transition:      width 1s;
         -webkit-transition: width 1s;
     border-radius: 20px;
+}
+button::-moz-focus-inner {
+    border: 0;
+}
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 rgba(40, 31, 31, 0.6);
+}
+select {
+    background: transparent;
+    -moz-appearance: none;
+}
+select, select:checked, select:hover {
+   background-color: white;;
 }
 .portfolio_img {
     height: 500px;
@@ -703,8 +721,18 @@ h5 {
     padding-left: 40px;
     font-variant-numeric: lining-nums;
 }
-.success_sent_message {
+#success_sent_message {
     display: none;
+    width: 100%;
+    text-align: center;
+    height: 180px;
+    vertical-align: middle;
+}
+#success_sent_message h3 {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
 }
 #footer {
     width: 100%;
@@ -782,6 +810,20 @@ h5 {
 .our_contacts {
     border: 2px solid rgba(207, 178, 178, 0.7);
     box-sizing: border-box;
+}
+#call_master input.error, #call_master select.error {
+    border: 1px solid red;
+}
+#fix_mistakes {
+    visibility: hidden;
+    font-size: 14px;
+    color: red;
+    margin-bottom: 0;
+    line-height: 16px;
+    text-align: center;
+}
+.slick-initialized .slick-slide {
+    outline: none;
 }
 
 @media only screen and (min-width: 1201px) and (max-width: 1700px) {

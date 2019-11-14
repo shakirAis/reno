@@ -381,10 +381,12 @@
     <div id="call_master">
         <h2>бесплатный вызов мастера на замеры</h2>
         <div class="call_master_wrapper">
-            <form class="send_mail_form">
+            <h6 id="fix_mistakes">Пожалуйста, введите недостающие поля!</h6>
+            <form id="contact-form" class="send_mail_form">
                 <div class="uk-grid-collapse uk-text-center uk-text-middle uk-child-width-1-5@xl uk-child-width-1-4@l uk-child-width-1-4@m uk-child-width-1-2@s" uk-grid>
                     <div>
-                        <input type="text" name="date"  class="date_input" onfocus="(this.type = 'date'), open_date()" placeholder="Выберите удобную дату" id="actualDate">
+                        <input type="hidden" name="contact_number">
+                        <input type="text" name="choosenDate"  class="date_input" onfocus="(this.type = 'date'), open_date()" placeholder="Выберите день для замеров" id="actualDate">
                     </div>
                     <div>
                         <input type="tel" name="phone" 
@@ -392,28 +394,28 @@
                         placeholder="Номер телефона">
                     </div>
                     <div>
-                        <input type="text" name="name" class="name_input" pattern="[а-яА-ЯёЁ]{2,64}" required title="Разрешены только буквы кириллицы" 
-                        maxlenth="30" minlenth="2" autocomplete="off" placeholder="Ваше имя">
+                        <input type="text" name="name" class="name_input" pattern="[A-Za-z]{3,15}"
+                        autocomplete="off" placeholder="Ваше имя">
                     </div>
                     <div>
-                        <select name="object" class="choosen_object">
-                            <option value="0">Выберите тип обькта</option>
-                            <option value="1">Квартира</option>
-                            <option value="2">Офис</option>
-                            <option value="3">Ванная комната</option>
-                            <option value="4">Установка окон и дверей</option>
-                            <option value="5">Установка коммуникаций</option>
-                            <option value="6">Установка техники</option>
-                            <option value="7">Другое</option>
+                        <select name="choosenObject" class="choosen_object">
+                            <option value="Ничего не выбрано">Выберите тип обькта</option>
+                            <option value="Квартира">Квартира</option>
+                            <option value="Офис">Офис</option>
+                            <option value="Ванная комната">Ванная комната</option>
+                            <option value="Установка окон и дверей">Установка окон и дверей</option>
+                            <option value="Установка коммуникаций">Установка коммуникаций</option>
+                            <option value="Установка техники">Установка техники</option>
+                            <option value="Другое">Другое</option>
                         </select>
                     </div>
                     <div class="uk-width-1-1@l uk-width-1-5@xl uk-child-width-1-1@m uk-width-1-1@s">
-                        <button type="submit" onclick="send_mail()" class="send_mail_button">Отправить</button>
+                        <button type="submit" value="Send" class="send_mail_button">Отправить</button>
                     </div>
                 </div>
             </form>
         </div>
-        <div class="success_sent_message">
+        <div id="success_sent_message">
             <h3>Ваша заявка отправлена! <br>Наши мастера обязательно<br>свяжутся с Вами!</h3>
         </div>
     </div>
@@ -530,8 +532,58 @@
     <script type="text/javascript" src="libs/slick/slick.min.js"></script>
     <script src="libs/uikit/js/uikit.min.js"></script>
     <script src="libs/uikit/js/uikit-icons.min.js"></script>
-    <script src="libs/js/jquery.maskedinput.min.js"text/javascript"></script>
+    <script src="libs/js/jquery.maskedinput.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
     <script type="text/javascript">
+        (function(){
+           emailjs.init('user_0VgxEbIRNQeDQuSdlPiM1');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                let name = document.getElementsByClassName("name_input")[0];
+                let name_value = name.value;
+                let phone = document.getElementsByClassName("phone_input")[0];
+                let phone_value = phone.value;
+                let choosenDate = document.getElementsByClassName("date_input")[0];
+                let choosenDate_value = choosenDate.value;
+                let choosenObject = document.getElementsByClassName("choosen_object")[0];
+                let choosenObject_value = choosenObject.value;
+                let contact_form = document.getElementById('contact-form');
+                let success_sent_message = document.getElementById('success_sent_message');
+                let fix_mistakes = document.getElementById('fix_mistakes');
+                let error = 0;
+                if (name_value === '' || name_value === undefined) {
+                    error = 1;
+                    name.classList.add('error');
+                } 
+                if (phone_value === '' || phone_value === undefined) {
+                    error = 1;
+                    phone.classList.add('error');
+                } 
+                if (choosenDate_value === '' || choosenDate_value === undefined) {
+                    error = 1;
+                    choosenDate.classList.add('error');
+                } 
+                if (choosenObject_value === "Ничего не выбрано" || choosenObject_value === undefined) {
+                    error = 1;
+                    console.log('hueufyeru Ничего не выбрано');
+                    choosenObject.classList.add('error');
+                }
+                this.contact_number.value = Math.random() * 100000 | 0;
+                if (error === 0) {
+                    emailjs.sendForm('gmail', 'haus_master_email', this);
+                    contact_form.style.display = 'none';
+                    success_sent_message.style.display = 'table';
+                    fix_mistakes.style.visibility = 'hidden';
+                    
+                } else {
+                    fix_mistakes.style.visibility = 'visible';
+                }
+            });
+        }
         $(document).ready(function(){
           $('#banner').slick({
             infinite: true,
@@ -554,7 +606,7 @@
         $(function() {
             $.mask.definitions['~'] = "[+-]";
             
-            $(".phones").mask("+7 (999) 999-9999");
+            $(".phone_input").mask("+7 (999) 999-9999");
             
             $("#phoneAutoclearFalse").mask("+7 (999) 999-9999", { autoclear: false, completed:function(){alert("completed autoclear!");} });
             $("#phoneExtAutoclearFalse").mask("+7 (999) 999-9999? x99999", { autoclear: false });
@@ -564,49 +616,6 @@
                 $(this).unmask();
             });
         });
-        function send_mail(e) {
-            e.preventDefault();
-
-            let name = document.getElementsByClassName("name_input")[0];
-            let name_value = name.value;
-            let phone = document.getElementsByClassName("phone_input")[0];
-            let phone_value = phone.value;
-            let choosenDate = document.getElementsByClassName("date_input")[0];
-            let choosenDate_value = choosenDate.value;
-            let choosenObject = document.getElementsByClassName("choosen_object")[0];
-            let choosenObject_value = choosenObject.value;
-            let send_mail_button = document.getElementsByClassName('send_mail_button')[0];
-            let error = 0;
-
-
-            if (name_value === '' || name_value === undefined) {
-                error = 1;
-                name.classList.add('error');
-            } else if (phone_value === '' || phone_value === undefined) {
-                error = 1;
-                phone.classList.add('error');
-            } else if (choosenDate_value === '' || choosenDate_value === undefined) {
-                error = 1;
-                choosenDate.classList.add('error');
-            } else if (choosenObject_value === '' || choosenObject_value === undefined) {
-                error = 1;
-                choosenObject.classList.add('error');
-            }
-            if (error === 0) {
-                send_mail_button.classList.add('load');
-                $.ajax({
-                    url: "./libs/php/form.php",
-                    method: "POST",
-                    data: { name:name_value, phone: phone_value, choosenDate: choosenDate_value, 
-                        choosenObject: choosenObject_value },
-                    dataType: "html"
-                }).done(function() {
-                    send_mail_button.classList.remove('load');
-                    $(".send_mail_form").hide();
-                    $(".success_sent_message").show();
-                });
-            }
-        }
         function showMoreBlock(blocks_nummer) {
             let current_btn = document.getElementsByClassName('active_btn');
             let pressed_btn = document.getElementsByClassName(blocks_nummer);
