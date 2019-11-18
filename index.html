@@ -18,6 +18,7 @@
 <body>
     <div id="header">
         <a class="logo" href="#"></a>
+        <a href="tel:+7(843)2000000" class="call_me_mob"><i class="fas fa-phone-alt"></i></a>
         <button onclick="openMenu()" class="burger"><i class="fas fa-bars"></i></button>
         <button onclick="closeMenu()" class="close_button"><i class="fas fa-times"></i></button>
         <ul id="menu">
@@ -381,7 +382,7 @@
     <div id="call_master">
         <h2>бесплатный вызов мастера на замеры</h2>
         <div class="call_master_wrapper">
-            <h6 id="fix_mistakes">Пожалуйста, введите недостающие поля!</h6>
+            <h6 id="fix_mistakes">Пожалуйста, заполните недостающие поля!</h6>
             <form id="contact-form" class="send_mail_form">
                 <div class="uk-grid-collapse uk-text-center uk-text-middle uk-child-width-1-5@xl uk-child-width-1-4@l uk-child-width-1-4@m uk-child-width-1-2@s" uk-grid>
                     <div>
@@ -394,12 +395,12 @@
                         placeholder="Номер телефона">
                     </div>
                     <div>
-                        <input type="text" name="name" class="name_input" pattern="[A-Za-z]{3,15}"
+                        <input type="text" name="name" class="name_input" pattern="[а-яА-ЯёЁ-A-Za-z]{3,15}"
                         autocomplete="off" placeholder="Ваше имя">
                     </div>
                     <div>
                         <select name="choosenObject" class="choosen_object">
-                            <option value="Ничего не выбрано">Выберите тип обькта</option>
+                            <option value="Ничего не выбрано">Выберите тип объкта</option>
                             <option value="Квартира">Квартира</option>
                             <option value="Офис">Офис</option>
                             <option value="Ванная комната">Ванная комната</option>
@@ -563,15 +564,6 @@
                     error = 1;
                     phone.classList.add('error');
                 } 
-                if (choosenDate_value === '' || choosenDate_value === undefined) {
-                    error = 1;
-                    choosenDate.classList.add('error');
-                } 
-                if (choosenObject_value === "Ничего не выбрано" || choosenObject_value === undefined) {
-                    error = 1;
-                    console.log('hueufyeru Ничего не выбрано');
-                    choosenObject.classList.add('error');
-                }
                 this.contact_number.value = Math.random() * 100000 | 0;
                 if (error === 0) {
                     emailjs.sendForm('gmail', 'haus_master_email', this);
@@ -695,6 +687,7 @@
             function WidthChange(mq) {
                 if (mq.matches) {
                     burger.style.display = 'block';
+                    
                 } else {
                     burger.style.display = 'none';
                 }
