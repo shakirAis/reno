@@ -1171,7 +1171,7 @@ h5 {
         z-index: 10;
         background-color: rgb(207, 178, 178);
     }
-    #banner {
+    .main {
         padding-top: 100px;
     }
     #banner h1 {
@@ -1461,7 +1461,7 @@ h5 {
         z-index: 10;
         background-color: rgb(207, 178, 178);
     }
-    #banner {
+    .main {
         padding-top: 100px;
     }
     #banner h1 {
