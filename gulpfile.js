@@ -36,13 +36,11 @@ function css() {
 };
 
 function js() {
-	return (
-		gulp
+	return gulp
 		.src(paths.scripts.src)
         .pipe(concat('script.js'))
         .pipe(gulp.dest(paths.scripts.dest))
 		.pipe(browsersync.stream())
-	)
 };
 
 function scriptsLint() {
@@ -84,6 +82,7 @@ function clean() {
 
 function watchFiles() {
 	gulp.watch(paths.styles.src, css);
+	gulp.watch(paths.scripts.src, js);
 	gulp.watch(paths.scripts.src, gulp.series(scriptsLint, js));
 	gulp.watch(paths.images.src, img);
 	gulp.watch("./**/*.html", browserSyncReload);
