@@ -129,7 +129,7 @@ body {
     color: #30292b;
     text-decoration: none;
 }
-#banner h1 {
+#banner h1, h7 {
     font-family: Raleway-Medium;
     font-style: normal;
     font-weight: 500;
@@ -857,7 +857,7 @@ form {
         line-height: 20px;
         vertical-align: -webkit-baseline-middle;
     }
-    #banner h1 {
+    #banner h1, h7 {
         font-size: 40px;
     }
     .feature h3 {
@@ -1020,7 +1020,7 @@ form {
     .phone_number i {
         display: none;
     }
-    #banner h1 {
+    #banner h1, h7 {
         font-size: 40px;
     }
     .feature h3 {
@@ -1196,7 +1196,7 @@ form {
     .main {
         padding-top: 100px;
     }
-    #banner h1 {
+    #banner h1, h7 {
         width: 100%;
         font-size: 30px;
         line-height: 30px;
@@ -1486,7 +1486,7 @@ form {
     .main {
         padding-top: 100px;
     }
-    #banner h1 {
+    #banner h1, h7 {
         width: 100%;
         font-size: 30px;
         line-height: 30px;

@@ -1,0 +1,5 @@
+User-Agent: *
+
+User-Agent: GoogleBot
+
+User-Agent: YandexBot
