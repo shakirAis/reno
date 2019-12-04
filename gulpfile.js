@@ -5,6 +5,7 @@ const browsersync = require('browser-sync').create();
 const del = require("del");
 const eslint = require("gulp-eslint");
 const plumber = require("gulp-plumber");
+const imagemin = require('gulp-imagemin');
 
 const { parallel } = require('gulp');
 
@@ -52,14 +53,23 @@ function scriptsLint() {
 	  .pipe(eslint.failAftepaths.scripts.srcrError());
   }
 
-function img() {
-	return (
-		gulp
-		.src(paths.images.src)
-        .pipe(gulp.dest(paths.images.dest))
-        .pipe(browsersync.stream())
-	)
-};
+// function img() {
+// 	return (
+// 		gulp
+// 		.src(paths.images.src)
+//         .pipe(gulp.dest(paths.images.dest))
+//         .pipe(browsersync.stream())
+// 	)
+// };
+
+function imgmin() {
+	return gulp 
+	.src(paths.images.src)
+        .pipe(imagemin())
+		.pipe(gulp.dest(paths.images.dest))
+		.pipe(browsersync.stream())
+}
+
 function browserSync(done) {
 	browsersync.init({
 	  server: {
@@ -84,19 +94,19 @@ function watchFiles() {
 	gulp.watch(paths.styles.src, css);
 	gulp.watch(paths.scripts.src, js);
 	gulp.watch(paths.scripts.src, gulp.series(scriptsLint, js));
-	gulp.watch(paths.images.src, img);
+	gulp.watch(paths.images.src, imgmin);
 	gulp.watch("./**/*.html", browserSyncReload);
 }
 
 
 // const js_all = gulp.series(scriptsLint, js);
-const build = gulp.series(clean, gulp.parallel(css, js, img));
+const build = gulp.series(clean, gulp.parallel(css, js, imgmin));
 const watch = gulp.parallel(watchFiles, browserSync);
 const defaultTask = gulp.parallel(build, watch);
 
 exports.css = css;
 exports.js = js;
-exports.img = img;
+exports.imgmin = imgmin;
 exports.build = build;
 exports.watch = watch;
 exports.default = defaultTask;
